@@ -3,13 +3,18 @@
 //Part 1: 
 
 function businessHours(dayNumber,hourNumber){
-    if(hourNumber>=9 && hourNumber<=18){
-        return true;
-    }else if(hourNumber>0 && hourNumber<24 ){
-        return false;
+    if (dayNumber>=1 && dayNumber<=5){
+        if(hourNumber>=9 && hourNumber<=18){
+            return true;
+        }else if(hourNumber>0 && hourNumber<24 ){
+            return false;
+        }else{
+            return "Valor invalido";
+        }   
     }else{
-        return "Valor invalido";
-    }    
+        return false;
+    }
+
 }
 
 alert(businessHours(parseFloat(prompt("Que dia es hoy?(1-7)")),parseFloat(prompt("Que hora es?(0-24)"))));
